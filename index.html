@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farhan Hasnat — SEO Expert &amp; Digital Marketer</title>
+<meta name="description" content="Farhan Hasnat is a Professional SEO Expert and Digital Marketer helping businesses improve online visibility through on-page SEO, keyword research, content optimization and search-friendly strategy.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg: #0a0a0a;
+  --bg-panel: #121212;
+  --bg-panel-2: #161616;
+  --line: #262626;
+  --line-soft: #1c1c1c;
+  --text: #f4f4f2;
+  --text-muted: #9a9a97;
+  --text-dim: #6b6b68;
+  --red: #e2261c;
+  --red-bright: #ff3b30;
+  --red-dim: #7a1712;
+  --radius: 2px;
+  --maxw: 1180px;
+  --ease: cubic-bezier(.16,.84,.44,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important;}
+}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',system-ui,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit; text-decoration:none;}
+ul{list-style:none;}
+img{max-width:100%; display:block;}
+button{font-family:inherit; cursor:pointer;}
+input, textarea{font-family:inherit;}
+::selection{background:var(--red); color:#fff;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
+.mono{font-family:'JetBrains Mono',monospace;}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--red);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:18px;
+}
+.eyebrow::before{
+  content:"";
+  width:22px; height:1px;
+  background:var(--red);
+  display:inline-block;
+}
+.display{
+  font-family:'Bebas Neue',sans-serif;
+  letter-spacing:.01em;
+  line-height:.95;
+  text-transform:uppercase;
+}
+.section{
+  padding:120px 0;
+  border-bottom:1px solid var(--line-soft);
+  position:relative;
+}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:40px;
+  margin-bottom:64px;
+  flex-wrap:wrap;
+}
+.section-title{
+  font-size:clamp(34px,5vw,56px);
+}
+.section-desc{
+  max-width:380px;
+  color:var(--text-muted);
+  font-size:15px;
+}
+/* buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:15px 28px;
+  border-radius:var(--radius);
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  transition:all .35s var(--ease);
+  border:1px solid transparent;
+  white-space:nowrap;
+}
+.btn-primary{
+  background:var(--red);
+  color:#fff;
+  box-shadow:0 0 0 0 rgba(226,38,28,.6);
+}
+.btn-primary:hover{
+  background:var(--red-bright);
+  box-shadow:0 0 26px 2px rgba(226,38,28,.55);
+  transform:translateY(-2px);
+}
+.btn-outline{
+  border-color:var(--line);
+  color:var(--text);
+  background:transparent;
+}
+.btn-outline:hover{
+  border-color:var(--red);
+  color:var(--red);
+  box-shadow:0 0 18px -4px rgba(226,38,28,.5);
+}
+.btn-sm{padding:11px 18px; font-size:11px;}
+/* ===== header ===== */
+header{
+  position:fixed; top:0; left:0; right:0;
+  z-index:100;
+  border-bottom:1px solid transparent;
+  transition:all .4s var(--ease);
+  padding:22px 0;
+}
+header.scrolled{
+  background:rgba(10,10,10,.86);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom-color:var(--line-soft);
+  padding:15px 0;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+.logo-name{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:24px;
+  letter-spacing:.04em;
+}
+.logo-tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  letter-spacing:.18em;
+  color:var(--red);
+  margin-top:3px;
+}
+.nav-links{
+  display:flex;
+  gap:40px;
+  align-items:center;
+}
+.nav-links a{
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:.02em;
+  color:var(--text-muted);
+  position:relative;
+  padding:4px 0;
+  transition:color .3s;
+}
+.nav-links a::after{
+  content:"";
+  position:absolute; left:0; bottom:-2px;
+  width:0; height:1px;
+  background:var(--red);
+  transition:width .3s var(--ease);
+}
+.nav-links a:hover, .nav-links a.active{color:var(--text);}
+.nav-links a:hover::after, .nav-links a.active::after{width:100%;}
+.nav-right{display:flex; align-items:center; gap:28px;}
+.burger{
+  display:none;
+  width:26px; height:18px;
+  position:relative;
+  background:none; border:none;
+}
+.burger span{
+  position:absolute; left:0; width:100%; height:1px;
+  background:var(--text); transition:all .3s var(--ease);
+}
+.burger span:nth-child(1){top:0;}
+.burger span:nth-child(2){top:8px;}
+.burger span:nth-child(3){top:16px;}
+.burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+.burger.open span:nth-child(2){opacity:0;}
+.burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+.mobile-menu{
+  position:fixed; inset:0;
+  background:var(--bg);
+  z-index:99;
+  display:flex; flex-direction:column;
+  justify-content:center;
+  padding:32px;
+  transform:translateY(-100%);
+  transition:transform .5s var(--ease);
+}
+.mobile-menu.open{transform:translateY(0);}
+.mobile-menu a{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:44px;
+  padding:14px 0;
+  border-bottom:1px solid var(--line-soft);
+}
+/* ===== hero ===== */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding-top:120px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-grid{
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(to right, rgba(226,38,28,.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226,38,28,.06) 1px, transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 40%, #000 10%, transparent 75%);
+  mask-image:radial-gradient(ellipse 70% 60% at 50% 40%, #000 10%, transparent 75%);
+  pointer-events:none;
+}
+.scanline{
+  position:absolute; left:0; right:0; height:120px;
+  background:linear-gradient(to bottom, transparent, rgba(226,38,28,.09), transparent);
+  animation:scan 7s linear infinite;
+  pointer-events:none;
+}
+@keyframes scan{
+  0%{top:-120px;}
+  100%{top:100%;}
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:60px;
+  align-items:center;
+  position:relative;
+  z-index:2;
+}
+.hero-title{
+  font-size:clamp(46px,7vw,88px);
+  margin-bottom:20px;
+}
+.hero-title span{color:var(--red);}
+.hero-sub{
+  font-size:clamp(17px,2vw,22px);
+  color:var(--text);
+  font-weight:600;
+  margin-bottom:18px;
+}
+.hero-text{
+  color:var(--text-muted);
+  max-width:480px;
+  font-size:15.5px;
+  margin-bottom:32px;
+}
+.hero-highlight{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:9px 16px;
+  border:1px solid var(--line);
+  border-radius:100px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  color:var(--text-muted);
+  margin-bottom:32px;
+}
+.hero-highlight .dot{
+  width:7px; height:7px; border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 8px 1px var(--red-bright);
+  animation:pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{opacity:1;}
+  50%{opacity:.35;}
+}
+.hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
+/* profile art */
+.hero-art{position:relative; display:flex; justify-content:center;}
+.profile-frame{
+  position:relative;
+  width:340px; height:400px;
+  border-radius:6px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+.profile-frame::before{
+  content:"";
+  position:absolute; inset:-2px;
+  border-radius:8px;
+  background:conic-gradient(from 0deg, var(--red), transparent 30%, transparent 70%, var(--red));
+  z-index:-1;
+  animation:spin 6s linear infinite;
+  opacity:.9;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+.profile-photo{
+  width:100%; height:100%;
+  background:#0d0d0d;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.profile-photo img{
+  width:100%; height:100%;
+  object-fit:cover;
+}
+.serp-card{
+  position:absolute;
+  bottom:-28px; left:-40px;
+  background:var(--bg-panel);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:14px 16px;
+  width:230px;
+  box-shadow:0 20px 50px -20px rgba(0,0,0,.7);
+}
+.serp-card .serp-top{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:8px;
+}
+.serp-card .serp-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px; color:var(--text-dim); letter-spacing:.1em;
+}
+.serp-rank{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:26px; color:var(--red); line-height:1;
+}
+.serp-bars{display:flex; align-items:flex-end; gap:4px; height:26px;}
+.serp-bars span{
+  flex:1; background:var(--line);
+  border-radius:1px;
+  animation:barup 2.4s var(--ease) infinite;
+}
+.serp-bars span:nth-child(1){height:40%; animation-delay:0s;}
+.serp-bars span:nth-child(2){height:60%; animation-delay:.15s;}
+.serp-bars span:nth-child(3){height:35%; animation-delay:.3s;}
+.serp-bars span:nth-child(4){height:80%; background:var(--red); animation-delay:.45s;}
+.serp-bars span:nth-child(5){height:55%; animation-delay:.6s;}
+@keyframes barup{
+  0%,100%{opacity:.55; transform:scaleY(.85);}
+  50%{opacity:1; transform:scaleY(1);}
+}
+/* ===== reveal ===== */
+.reveal{opacity:0; transform:translateY(28px); transition:opacity .8s var(--ease), transform .8s var(--ease);}
+.reveal.in{opacity:1; transform:translateY(0);}
+/* ===== about ===== */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:start;
+}
+.about-text p{color:var(--text-muted); font-size:15.5px; margin-bottom:26px; max-width:520px;}
+.specialty-list{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:8px;}
+.specialty-item{
+  display:flex; align-items:center; gap:10px;
+  font-size:13.5px; color:var(--text);
+  padding:10px 0;
+  border-bottom:1px solid var(--line-soft);
+}
+.specialty-item svg{width:14px; height:14px; color:var(--red); flex-shrink:0;}
+.stat-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:var(--line-soft);
+  border:1px solid var(--line-soft);
+  margin-top:60px;
+}
+.stat-cell{
+  background:var(--bg);
+  padding:26px 20px;
+  text-align:center;
+}
+.stat-num{font-family:'Bebas Neue',sans-serif; font-size:34px; color:var(--red);}
+.stat-label{font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--text-dim); letter-spacing:.06em; text-transform:uppercase; margin-top:6px;}
+/* ===== skills ===== */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--line-soft);
+  border:1px solid var(--line-soft);
+}
+.skill-card{
+  background:var(--bg-panel);
+  padding:34px 24px;
+  transition:background .35s;
+  position:relative;
+}
+.skill-card:hover{background:var(--bg-panel-2);}
+.skill-icon{
+  width:34px; height:34px;
+  color:var(--red);
+  margin-bottom:20px;
+}
+.skill-name{font-size:15px; font-weight:600; margin-bottom:8px;}
+.skill-desc{font-size:12.5px; color:var(--text-dim); line-height:1.5;}
+/* ===== portfolio ===== */
+.filter-tags{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:44px;}
+.filter-tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px; letter-spacing:.05em; text-transform:uppercase;
+  padding:8px 16px;
+  border:1px solid var(--line);
+  border-radius:100px;
+  color:var(--text-dim);
+  transition:all .3s;
+  background:transparent;
+}
+.filter-tag:hover, .filter-tag.active{color:var(--text); border-color:var(--red);}
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+}
+.p-card{
+  background:var(--bg-panel);
+  border:1px solid var(--line);
+  border-radius:6px;
+  overflow:hidden;
+  transition:transform .4s var(--ease), border-color .4s;
+}
+.p-card:hover{transform:translateY(-6px); border-color:var(--red);}
+.p-thumb{
+  aspect-ratio:16/10;
+  background:
+    repeating-linear-gradient(135deg, rgba(226,38,28,.05) 0 2px, transparent 2px 14px),
+    linear-gradient(160deg,#171717,#0d0d0d);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--text-dim);
+  border-bottom:1px solid var(--line);
+}
+.p-thumb svg{width:34px; height:34px; opacity:.4;}
+.p-body{padding:22px;}
+.p-tag{
+  font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--red);
+  text-transform:uppercase; letter-spacing:.08em; margin-bottom:10px; display:block;
+}
+.p-title{font-size:17px; font-weight:700; margin-bottom:8px;}
+.p-desc{font-size:13px; color:var(--text-muted); margin-bottom:14px; min-height:38px;}
+.p-services{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px;}
+.p-services span{
+  font-size:10.5px; color:var(--text-dim);
+  border:1px solid var(--line-soft); padding:4px 9px; border-radius:100px;
+}
+/* ===== services ===== */
+.services-grid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+  background:var(--line-soft); border:1px solid var(--line-soft);
+}
+.service-card{
+  background:var(--bg);
+  padding:38px 30px;
+  transition:background .35s;
+}
+.service-card:hover{background:var(--bg-panel);}
+.service-icon{width:30px; height:30px; color:var(--red); margin-bottom:22px;}
+.service-title{font-size:17px; font-weight:700; margin-bottom:10px;}
+.service-desc{font-size:13.5px; color:var(--text-muted);}
+/* ===== contact ===== */
+.contact-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:70px;
+}
+.field{margin-bottom:22px;}
+.field label{
+  display:block; font-family:'JetBrains Mono',monospace; font-size:10.5px;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--text-dim); margin-bottom:8px;
+}
+.field input, .field textarea{
+  width:100%;
+  background:transparent;
+  border:none;
+  border-bottom:1px solid var(--line);
+  padding:12px 2px;
+  color:var(--text);
+  font-size:14.5px;
+  transition:border-color .3s;
+}
+.field input:focus, .field textarea:focus{
+  outline:none; border-color:var(--red);
+}
+.field textarea{resize:vertical; min-height:100px;}
+.row2{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+.contact-info-list{display:flex; flex-direction:column; gap:0;}
+.info-item{
+  display:flex; align-items:center; gap:16px;
+  padding:20px 0;
+  border-bottom:1px solid var(--line-soft);
+}
+.info-icon{
+  width:38px; height:38px; flex-shrink:0;
+  border:1px solid var(--line);
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--red);
+}
+.info-icon svg{width:16px; height:16px;}
+.info-label{font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text-dim); letter-spacing:.06em; text-transform:uppercase;}
+.info-value{font-size:14.5px; margin-top:3px;}
+/* ===== footer ===== */
+footer{padding:70px 0 30px;}
+.footer-top{
+  display:flex; justify-content:space-between; align-items:flex-start;
+  flex-wrap:wrap; gap:40px; padding-bottom:50px;
+}
+.footer-tag{color:var(--text-muted); font-size:13.5px; margin-top:10px; max-width:280px;}
+.footer-cols{display:flex; gap:80px; flex-wrap:wrap;}
+.footer-col h4{
+  font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--text-dim); margin-bottom:16px;
+}
+.footer-col a{
+  display:block; font-size:13.5px; color:var(--text-muted); margin-bottom:10px;
+  transition:color .3s;
+}
+.footer-col a:hover{color:var(--red);}
+.socials{display:flex; gap:12px;}
+.social-btn{
+  width:38px; height:38px; border:1px solid var(--line); border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--text-muted); transition:all .3s;
+}
+.social-btn:hover{border-color:var(--red); color:var(--red); box-shadow:0 0 14px -4px rgba(226,38,28,.6);}
+.social-btn svg{width:15px; height:15px;}
+.footer-bottom{
+  display:flex; justify-content:space-between; align-items:center;
+  border-top:1px solid var(--line-soft);
+  padding-top:26px;
+  font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-dim);
+  flex-wrap:wrap; gap:14px;
+}
+/* ===== responsive ===== */
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr; text-align:center;}
+  .hero-text{margin-left:auto; margin-right:auto;}
+  .hero-ctas{justify-content:center;}
+  .hero-art{margin-top:60px;}
+  .about-grid, .contact-grid{grid-template-columns:1fr;}
+  .skills-grid{grid-template-columns:repeat(2,1fr);}
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr);}
+  .stat-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:720px){
+  .nav-links, .nav-right .btn{display:none;}
+  .burger{display:block;}
+  .section{padding:80px 0;}
+  .wrap{padding:0 22px;}
+  .skills-grid, .services-grid, .portfolio-grid{grid-template-columns:1fr;}
+  .stat-grid{grid-template-columns:repeat(2,1fr);}
+  .row2{grid-template-columns:1fr;}
+  .serp-card{position:static; margin:24px auto 0; width:100%; max-width:280px;}
+  .profile-frame{width:100%; max-width:320px; margin:0 auto;}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="wrap nav">
+    <a href="#home" class="logo">
+      <span class="logo-name">FARHAN HASNAT</span>
+      <span class="logo-tag">SEO &amp; DIGITAL MARKETING</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#contact" class="btn btn-primary btn-sm">Let's Work Together</a>
+      <button class="burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="scanline"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="hero-highlight"><span class="dot"></span> Available for new projects</div>
+      <h1 class="display hero-title">SEO Expert &amp;<br><span>Digital Marketing</span> Strategist</h1>
+      <p class="hero-sub">I help businesses rank higher, get found, and grow.</p>
+      <p class="hero-text">I'm Farhan Hasnat, a professional SEO Expert and Digital Marketer. I specialize in on-page SEO, keyword research, content optimization, and search-friendly strategy to boost your online visibility and drive real, measurable growth.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+        <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="profile-frame">
+        <div class="profile-photo">
+          <img src="my-profile.jpg" alt="Farhan Hasnat">
+        </div>
+      </div>
+      <div class="serp-card">
+        <div class="serp-top">
+          <span class="serp-label">SERP RANK</span>
+          <span class="serp-rank">#1</span>
+        </div>
+        <div class="serp-bars">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="eyebrow">About Me</div>
+        <h2 class="section-title display" style="margin-bottom:24px;">Driven by data,<br>focused on results.</h2>
+        <p>With years of hands-on experience in SEO and digital marketing, I help brands and businesses build a stronger online presence through strategic, search-friendly content and technical optimization.</p>
+        <p>My approach combines deep keyword research, on-page optimization, and content strategy to deliver sustainable organic growth — not just quick wins.</p>
+        <div class="specialty-list">
+          <div class="specialty-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> On-Page SEO</div>
+          <div class="specialty-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Keyword Research</div>
+          <div class="specialty-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Content Strategy</div>
+          <div class="specialty-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Technical SEO</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="stat-grid">
+          <div class="stat-cell"><div class="stat-num">50+</div><div class="stat-label">Projects</div></div>
+          <div class="stat-cell"><div class="stat-num">30+</div><div class="stat-label">Clients</div></div>
+          <div class="stat-cell"><div class="stat-num">3+</div><div class="stat-label">Years Exp</div></div>
+          <div class="stat-cell"><div class="stat-num">98%</div><div class="stat-label">Satisfaction</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="section" id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">What I Do</div>
+        <h2 class="section-title display">Core Skills</h2>
+      </div>
+      <p class="section-desc">A focused skillset built around getting websites found, trusted, and clicked.</p>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-card">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <div class="skill-name">Keyword Research</div>
+        <div class="skill-desc">Finding the exact terms your customers are searching for.</div>
+      </div>
+      <div class="skill-card">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/></svg>
+        <div class="skill-name">On-Page SEO</div>
+        <div class="skill-desc">Optimizing titles, structure, and content for search engines.</div>
+      </div>
+      <div class="skill-card">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        <div class="skill-name">Analytics &amp; Tracking</div>
+        <div class="skill-desc">Measuring what matters and adjusting strategy with data.</div>
+      </div>
+      <div class="skill-card">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+        <div class="skill-name">Content Strategy</div>
+        <div class="skill-desc">Planning content that ranks and converts.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section class="section" id="portfolio">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Recent Work</div>
+        <h2 class="section-title display">Selected Portfolio</h2>
+      </div>
+      <p class="section-desc">A few projects that show measurable growth in organic visibility.</p>
+    </div>
+    <div class="filter-tags reveal">
+      <button class="filter-tag active">All</button>
+      <button class="filter-tag">SEO</button>
+      <button class="filter-tag">Content</button>
+      <button class="filter-tag">Technical</button>
+    </div>
+    <div class="portfolio-grid reveal">
+      <div class="p-card">
+        <div class="p-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
+        <div class="p-body">
+          <span class="p-tag">SEO Case Study</span>
+          <div class="p-title">E-Commerce Growth</div>
+          <div class="p-desc">Boosted organic traffic by 140% in 6 months through on-page SEO.</div>
+          <div class="p-services"><span>Keyword Research</span><span>On-Page SEO</span></div>
+        </div>
+      </div>
+      <div class="p-card">
+        <div class="p-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
+        <div class="p-body">
+          <span class="p-tag">Content Strategy</span>
+          <div class="p-title">Local Business Ranking</div>
+          <div class="p-desc">Took a local service business to page 1 for core keywords.</div>
+          <div class="p-services"><span>Content</span><span>Local SEO</span></div>
+        </div>
+      </div>
+      <div class="p-card">
+        <div class="p-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
+        <div class="p-body">
+          <span class="p-tag">Technical SEO</span>
+          <div class="p-title">Site Speed &amp; Structure Fix</div>
+          <div class="p-desc">Fixed technical issues that were blocking indexing and rankings.</div>
+          <div class="p-services"><span>Technical SEO</span><span>Audits</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Services</div>
+        <h2 class="section-title display">How I Can Help</h2>
+      </div>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <div class="service-title">SEO Audits</div>
+        <div class="service-desc">Full technical and on-page audits to find what's holding your site back.</div>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/></svg>
+        <div class="service-title">On-Page Optimization</div>
+        <div class="service-desc">Optimizing every page for both search engines and real users.</div>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18"/></svg>
+        <div class="service-title">Content Planning</div>
+        <div class="service-desc">Building content calendars around real search demand.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Get In Touch</div>
+        <h2 class="section-title display">Let's Work Together</h2>
+      </div>
+    </div>
+    <div class="contact-grid reveal">
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! I will get back to you soon.');">
+        <div class="row2">
+          <div class="field">
+            <label>Name</label>
+            <input type="text" required>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label>Subject</label>
+          <input type="text">
+        </div>
+        <div class="field">
+          <label>Message</label>
+          <textarea required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+      <div class="contact-info-list">
+        <div class="info-item">
+          <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="m4 4 8 8 8-8"/></svg></div>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-value">contact@farhanhasnat.com</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg></div>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-value">+880 1XXX-XXXXXX</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4.5 8-11a8 8 0 1 0-16 0c0 6.5 8 11 8 11Z"/><circle cx="12" cy="11" r="3"/></svg></div>
+          <div>
+            <div class="info-label">Location</div>
+            <div class="info-value">Dhaka, Bangladesh</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <span class="logo-name display">FARHAN HASNAT</span>
+        <p class="footer-tag">Helping businesses grow through smart, search-friendly digital marketing.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="socials">
+            <a class="social-btn" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.35-.03-3.08-1.88-3.08-1.88 0-2.17 1.47-2.17 2.98V21H9z"/></svg></a>
+            <a class="social-btn" href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.6 0-1.3-.2-1.8-.5v.1a4.1 4.1 0 0 0 3.3 4 4.2 4.2 0 0 1-1.8.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Farhan Hasnat. All rights reserved.</span>
+      <span>Built with care.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      burger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('in');
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
